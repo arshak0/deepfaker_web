@@ -1,23 +1,26 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+****USE NODE VERSION 18.12.0****
 
-## Available Scripts
+## Commands to launch the program
 
-In the project directory, you can run:
+Firstly, install and use the node version 18.12.0
+The example of how to do that on the macOS
+### `nvm install 18.12.0`
+### `nvm use 18.12.0`
+If you don't have nvm, please, install it via homebrew, for instance, on the macOS
 
+Then install all packages
+### `npm install`
+### `yarn add`
+
+And then, launch the program, use
+
+### `npm start`
 ### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
@@ -28,6 +31,11 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn eject`
 
