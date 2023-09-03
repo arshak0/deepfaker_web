@@ -13,3 +13,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
+
+.ant-modal .ant-modal-content {
+  padding: 0;
+  border-radius: 32px;
+}
+
+.ant-modal-body {
+  border-radius: 32px;
+}
+
+@media screen and (max-width: 1023px) {
+  .ant-modal .ant-modal-content {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+
+  .ant-modal-body {
+    height: calc(100vh);
+    border-radius: 0;
+  }
+}

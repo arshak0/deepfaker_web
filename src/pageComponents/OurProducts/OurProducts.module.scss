@@ -1,0 +1,139 @@
+@import 'src/global/styles.scss';
+
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 100px 30px 70px 30px;
+  flex-direction: column;
+  align-items: center;
+
+  @include atMedium {
+    padding: 120px 120px 60px 120px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 50px 0 56px 0;
+  width: 100%;
+
+
+  @include atXSmall {
+    padding: 70px 0 66px 0;
+  }
+
+  @include atMedium {
+    flex-direction: row;
+    padding: 48px 0;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 290px;
+
+  @include atMedium {
+    align-items: start;
+  }
+}
+
+.headlineWrapper {
+  text-align: center;
+
+  @include atMedium {
+    text-align: start;
+  }
+}
+
+.noWrap {
+  text-wrap: nowrap;
+}
+
+.headline {
+  margin: 0;
+  color: $c-white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.mainHeadline {
+  margin: 0;
+  color: $c-white;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.button {
+  border-radius: 16px;
+  border: none;
+  background: #FB6F91;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  height: 56px;
+  margin-top: 32px;
+  width: 264px;
+
+  @include atXSmall {
+    width: 324px;
+  }
+
+  @include atMedium {
+    width: unset;
+    padding: 12px 24px;
+  }
+}
+
+.imgColumn {
+  display: flex;
+  justify-content: center;
+  @include atMedium {
+    padding: 0 32px;
+  }
+}
+
+.backgroundFace {
+  width: 100%;
+  height: 326px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  @include atMedium {
+    width: 608px;
+    height: 326px;
+  }
+}
+
+.alsoAvailable {
+  @include atMedium {
+    margin-top: 40px
+  }
+}
+
+.alsoAvailableHeadline {
+  text-align: center;
+}
+
+.alsoAvailableLinks {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  @include atMedium {
+    flex-direction: row;
+    gap: 87px;
+  }
+}
+
+.alsoAvailableImg {
+  height: 40px;
+  background: $c-black;
+}

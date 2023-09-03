@@ -3,28 +3,163 @@
 .body {
   display: flex;
   justify-content: center;
-  padding: 101px;
-}
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
 
-.content {
-  max-width: 998px;
-}
+  @include atMedium {
+    padding: 150px;
+    flex-direction: row;
+    gap: 140px;
+  }
 
-.search {
-  @media (max-width: 768px) {
-    margin-top: 20px;
+  @include atXLarge {
+    padding: 150px;
+    flex-direction: row;
+    gap: 300px;
   }
 }
 
-.cardLayout {
+.content {
+  padding: 50px 0 56px 0;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include atXSmall {
+    padding: 70px 0 66px 0;
+  }
+
+  @include atMedium {
+    display: block;
+    padding: 48px 0;
+    max-width: 380px;
+  }
 }
 
-.cardLayoutWrapper {
-  display: flex;
-  justify-content: center;
+.headlineWrapper {
+  text-align: center;
+
+  @include atMedium {
+    text-align: start;
+  }
+}
+
+.headline {
+  margin: 0;
+  color: $c-white;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+
+  @include atXSmall {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  @include atMedium {
+    font-size: 44px;
+    line-height: 53px;
+  }
+}
+
+.button {
+  border-radius: 16px;
+  border: none;
+  background: #FB6F91;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  height: 56px;
+  margin-top: 32px;
+  width: 264px;
+
+  @include atXSmall {
+    width: 324px;
+  }
+
+  @include atMedium {
+    width: unset;
+    padding: 12px 24px;
+  }
+}
+
+.imgColumn {
+  max-width: 282px;
+
+  @include atMedium {
+    padding: 0 32px;
+  }
+}
+
+.phoneWithGirl {
+  position: relative;
+  z-index: 11;
+  width: 222px;
+  height: 447px;
+
+  @include atXSmall {
+    width: 282px;
+    height: 568px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  z-index: 11;
+  margin-top: -438px;
+  margin-left: -95px;
+  width: 176px;
+  height: 66px;
+}
+
+.arrowMobile {
+  position: absolute;
+  z-index: 11;
+  margin-top: 49px;
+  margin-left: -76px;
+  width: 54px;
+  height: 80px;
+
+  @include atXSmall {
+    width: 67px;
+    height: 99px;
+    margin-top: 62px;
+    margin-left: -92px;
+  }
+}
+
+.faceAvatar {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: -26px;
+  margin-left: -72px;
+  z-index: 11;
+  border-radius: 50%;
+  box-shadow: 0px 7.268041610717773px 14.536083221435547px 0px #000000;
+
+  @include atXSmall {
+    width: 88px;
+    height: 88px;
+    margin-top: -30px;
+    margin-left: -88px;
+  }
+
+  @include atMedium {
+    margin-top: -530px;
+    margin-left: -145px;
+  }
+}
+
+.backgroundFace {
+  display: none;
+
+  @include atMedium {
+    display: block;
+    position: absolute;
+    margin-top: -430px;
+    margin-left: -230px;
+    z-index: 10;
+  }
 }

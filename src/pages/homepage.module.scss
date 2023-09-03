@@ -1,0 +1,270 @@
+@import '../global/styles';
+
+.header {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: $c-header-background;
+  padding: 0 32px;
+  border-bottom: 1px solid $c-header-border-color;
+  @include atMedium {
+    height: 80px;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 35px;
+}
+
+.content {
+  min-height: unset;
+  background: linear-gradient(46.18deg, rgba(14, 158, 242, 0.15) 1.39%, rgba(233, 133, 213, 0.15) 49.96%, rgba(21, 189, 117, 0.15) 98.63%);
+
+  @include atMedium {
+    min-height: calc(100vh - 160px);
+  }
+}
+
+.headline {
+  display: none;
+  @include atMedium {
+    margin-left: 20px;
+    display: block;
+  }
+}
+
+.headlineText {
+  word-break: normal;
+}
+
+.sandwichMenu {
+  position: fixed;
+  left: 0;
+  top: 64px;
+  width: 100vw;
+  height: calc( 100vh - 64px);
+  z-index: 20;
+  background: $c-header-background;
+
+  @include atMedium {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-basis: 80%;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+  }
+}
+
+.pagesLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  flex-basis: 80%;
+  margin-top: 60px;
+
+  @include atMedium {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    flex-basis: 80%;
+    margin-top: unset;
+  }
+}
+
+.loginSignupBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+  margin-top: 50px;
+
+  @include atMedium {
+    flex-direction: row;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 48px;
+  }
+}
+
+.link {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.firstButton {
+  color: $c-white;
+  padding: 0;
+}
+
+.firstButton:active {
+  color: $c-secondary!important;
+}
+
+.firstButton:visited {
+  color: $c-secondary!important;
+}
+
+.secondButton {
+  width: 107px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.button {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+a {
+  color: $c-white;
+}
+
+a:hover {
+  color: $c-secondary;
+}
+
+.promotionRow {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  width: 100%;
+  height: 48px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(76.17deg, #FCCD38 22.93%, #E985D5 43.86%, #F5619A 65.88%, #FA9E9A 80.22%),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+
+  @include atMedium {
+    top: 80px;
+    padding: 0 max(calc(50% - 720px), 50px);
+  }
+}
+
+.body {
+  width: 100%;
+  max-height: unset;
+  background: $c-body-background;
+
+  @include atMedium {
+    min-height: calc(100vh - 160px);
+  }
+}
+
+span.radiusText {
+  padding: 5px 16px;
+  border-radius: 16px;
+  color: $c-promotion-center;
+  background: $c-black;
+  font-weight: 800;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 700;
+  color: $c-white;
+  @include atMedium {
+    font-size: 16px;
+  }
+}
+
+.blackText {
+  font-size: 14px;
+  font-weight: 700;
+  color: $c-black;
+  @include atMedium {
+    font-size: 16px;
+  }
+}
+
+.textLight {
+  font-size: 12px;
+  font-weight: 500;
+  color: $c-white;
+
+  @include atXSmall {
+    font-size: 16px;
+  }
+}
+
+.footerWrapper {
+  width: 100%;
+  background: $c-footer-background;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 108px;
+  z-index: 11;
+  padding: 22px 22px 26px 22px;
+  border-top: 1px solid #FFFFFF26;
+
+  @include atXSmall {
+    height: 128px;
+    padding: 28px 22px;
+  }
+
+  @include atMedium {
+    text-align: start;
+    height: 80px;
+    padding: 28px 50px 24px 50px;
+  }
+}
+
+.footer {
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include atMedium {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+.footerButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  @include atXSmall {
+    margin-top: 20px;
+  }
+
+  @include atMedium {
+    gap: 40px;
+    justify-content: end;
+    margin-top: unset;
+  }
+}
+
+.footerDivider {
+  background: $c-footer-divider;
+  width: 1px;
+  height: 20px;
+
+  @include atXSmall {
+    height: 24px;
+  }
+}
+
+.footerLink {
+  font-weight: 600;
+  font-size: 12px;
+
+  @include atXSmall {
+    font-size: 16px;
+  }
+}

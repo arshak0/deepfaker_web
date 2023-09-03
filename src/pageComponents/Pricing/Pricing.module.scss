@@ -1,0 +1,173 @@
+@import 'src/global/styles.scss';
+
+.body {
+  display: flex;
+  justify-content: center;
+  padding: 100px 30px;
+  flex-direction: column;
+  align-items: center;
+
+  @include atMedium {
+    padding: 120px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include atMedium {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.content {
+  position: relative;
+  background: $c-main-div-background;
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  max-width: 384px;
+  margin-top: 20px;
+  height: 495px;
+  justify-content: space-between;
+
+  @include atXSmall {
+    width: 326px;
+  }
+
+  @include atMedium {
+    width: 384px;
+    border-radius: 32px;
+    padding: 30px;
+    height: 501px;
+  }
+
+  &:nth-child(1) {
+    order: 2;
+    height: unset;
+
+    @include atMedium {
+      order: 1;
+      height: 501px;
+    }
+  }
+
+  &:nth-child(2) {
+    order: 1;
+
+    @include atMedium {
+      order: 2;
+    }
+  }
+
+}
+
+.gradientFrame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 280px;
+  height: 500px;
+
+  @include atXSmall {
+    width: 326px;
+  }
+
+  @include atMedium {
+    top: -6px;
+    left: -6px;
+    width: 394px;
+    height: 512px;
+  }
+}
+
+.headlineWrapper {
+  text-align: center;
+
+  @include atMedium {
+    text-align: start;
+  }
+}
+
+.headline {
+  margin: 0;
+  color: $c-white;
+  font-size: 28px;
+  font-weight: 700;
+
+  @include atMedium {
+    font-size: 32px;
+    font-weight: 800;
+  }
+}
+
+.icon {
+  width: 13px;
+}
+
+.toAlignIcon {
+  margin-top: 20px;
+  transform: translateY(-24px);
+}
+
+.button {
+  border-radius: 16px;
+  border: none;
+  background: #FB6F91;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  height: 56px;
+  margin-top: 32px;
+  width: 100%;
+
+  @include atMedium {
+    padding: 12px 24px;
+  }
+}
+
+.yellowBackground {
+  background: $c-yellow-button-background;
+}
+
+.priceRow {
+  background: $c-price-row-black;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 12px 24px;
+}
+
+.priceRowFirst {
+  color: $c-white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.priceRowSecond {
+  color: $c-green-text;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.priceRowThird {
+  color: $c-white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.priceRowForth {
+  color: $c-grey-text;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}

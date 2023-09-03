@@ -1,0 +1,114 @@
+@import 'src/global/styles.scss';
+
+.bodyPage {
+  background: $c-main-div-background;
+  padding-top: 70px;
+}
+
+.content {
+  background: $c-main-div-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 56px 32px 42px 32px;
+  margin: 0 auto;
+
+  @include atXSmall {
+    width: 320px;
+  }
+
+  @include atSmall {
+    width: 384px;
+  }
+
+  @include atMedium {
+    padding: 48px 32px 42px 32px;
+    border-radius: 32px;
+  }
+}
+
+.modalHeadlineWrapper {
+  text-align: center;
+  margin-bottom: 48px;
+  @include atMedium {
+    margin-bottom: 36px;
+  }
+}
+
+.modalHeadline {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: $c-white;
+  @include atMedium {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
+.inputField {
+  height: 56px;
+  padding: 8px 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background: linear-gradient(84.84deg, rgba(14, 158, 242, 0.1) 9.34%, rgba(233, 133, 213, 0.1) 51.26%, rgba(21, 189, 117, 0.1) 95.06%, rgba(21, 189, 117, 0.1) 95.07%);
+  color: $c-white;
+
+  &::placeholder {
+    color: $c-white;
+  }
+}
+
+.button {
+  border-radius: 16px;
+  border: none;
+  background: #FB6F91;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  height: 56px;
+  margin-top: 14px;
+  width: 100%;
+
+  @include atMedium {
+    padding: 12px 24px;
+  }
+}
+
+button.plainButton {
+  color: $c-white;
+  padding: 0!important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.divider {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  background: linear-gradient(84.84deg, #0E9EF2 9.34%, #E985D5 51.26%, #15BD75 95.06%, #15BD75 95.07%);
+  width: 100%;
+  height: 1.5px;
+}
+
+.externalServicesButton {
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  height: 54px;
+  margin-top: 14px;
+  width: 100%;
+
+  @include atMedium {
+    padding: 12px 24px;
+  }
+}

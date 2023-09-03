@@ -1,0 +1,116 @@
+$media-xxs: 0;
+$media-xs: 375px;
+$media-s: 768px;
+$media-m: 1024px;
+$media-l: 1280px;
+$media-xl: 1440px;
+$media-xxl: 1920px;
+
+$display-breakpoints: (
+        xxs: $media-xxs,
+        xs: $media-xs,
+        s: $media-s,
+        m: $media-m,
+        l: $media-l,
+        xl: $media-xl,
+        xxl: $media-xxl
+);
+
+$display-breakpoints-intervals: (
+        xxs: (
+                $media-xxs,
+                $media-xs - 0.02px
+        ),
+        xs: (
+                $media-xs,
+                $media-s - 0.02px
+        ),
+        s: (
+                $media-s,
+                $media-m - 0.02px
+        ),
+        m: (
+                $media-m,
+                $media-l - 0.02px
+        ),
+        l: (
+                $media-l,
+                $media-xl - 0.02px
+        ),
+        xl: (
+                $media-xl,
+                $media-xxl - 0.02px
+        )
+);
+
+@mixin atXSmall {
+  @media (min-width: $media-xs) {
+    @content;
+  }
+}
+
+@mixin atSmall {
+  @media (min-width: $media-s) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: $media-m) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: $media-l) {
+    @content;
+  }
+}
+
+@mixin atXLarge {
+  @media (min-width: $media-xl) {
+    @content;
+  }
+}
+
+@mixin atXXLarge {
+  @media (min-width: $media-xxl) {
+    @content;
+  }
+}
+
+@mixin underXSmall {
+  @media (max-width: $media-xs - 0.02px) {
+    @content;
+  }
+}
+
+@mixin underSmall {
+  @media (max-width: $media-s - 0.02px) {
+    @content;
+  }
+}
+
+@mixin underMedium {
+  @media (max-width: $media-m - 0.02px) {
+    @content;
+  }
+}
+
+@mixin underLarge {
+  @media (max-width: $media-l - 0.02px) {
+    @content;
+  }
+}
+
+@mixin underXLarge {
+  @media (max-width: $media-xl - 0.02px) {
+    @content;
+  }
+}
+
+@mixin underXXLarge {
+  @media (max-width: $media-xxl - 0.02px) {
+    @content;
+  }
+}
